@@ -1,0 +1,43 @@
+﻿@{ ViewBag.Title = "Home Page";}
+
+@section Scripts{
+    <script>
+        function initMap() { alert("something went wrong") }
+    </script>
+    <script src="~/lib/underscore/underscore-min.js"></script>
+    <script src="~/lib/angular/angular.min.js"></script>
+    <script src="~/lib/angular-route/angular-route.min.js"></script>
+    
+    @*In the src below, the API key should not remain publicly availible in this project and should be protected
+        as an envrionment variable similar to what was done with the Bing Key in GeoCoordsService.cs*@
+    <script src="http://maps.google.com/maps/api/js?key=AIzaSyAm-JnMg89Kaz0pW5rcpClDBbx3fw4T-qs" type="text/javascript"></script>
+    
+<script src="~/lib/gmaps/gmaps.js"></script>
+
+    <script src="~/lib/travelmap/travelmap.min.js"></script>
+
+    <environment names="Development">
+        <script src="~/js/simpleControls.js"></script>
+        <script src="~/js/app-trips.js"></script>
+        <script src="~/js/tripsController.js"></script>
+        <script src="~/js/tripEditorController.js"></script>
+    </environment>
+
+    <environment names="Production,Staging">
+        <script src="~/lib/_app/simpleControls.js"></script>
+        <script src="/lib/_app/app-trips.js"></script>
+        <script src="/lib/_app/tripsController.js"></script>
+        <script src="/lib/_app/tripEditorController.js"></script>
+    </environment>
+
+}
+
+
+
+<div class="row" ng-app="app-trips">
+
+    <div ng-view></div>
+
+
+</div>
+

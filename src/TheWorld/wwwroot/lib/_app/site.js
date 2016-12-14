@@ -1,0 +1,1 @@
+!function(){var e=$("#sidebar,#wrapper"),a=$("#sidebarToggle i.fa");$("#sidebarToggle").on("click",function(){e.toggleClass("hide-sidebar"),e.hasClass("hide-sidebar")?(a.removeClass("fa-chevron-circle-left"),a.addClass("fa-chevron-circle-right")):(a.addClass("fa-chevron-circle-left"),a.removeClass("fa-chevron-circle-right"))})}();
